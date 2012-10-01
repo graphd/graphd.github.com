@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: visualization | Graphd]]></title>
+  <link href="http://graphd.github.com/blog/categories/visualization/atom.xml" rel="self"/>
+  <link href="http://graphd.github.com/"/>
+  <updated>2012-10-01T12:08:57+02:00</updated>
+  <id>http://graphd.github.com/</id>
+  <author>
+    <name><![CDATA[Graphd]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Git in color]]></title>
+    <link href="http://graphd.github.com/blog/2012/10/01/git-in-color/"/>
+    <updated>2012-10-01T10:46:00+02:00</updated>
+    <id>http://graphd.github.com/blog/2012/10/01/git-in-color</id>
+    <content type="html"><![CDATA[<p>This will add colors on git-diff, git-log, git-*:</p>
+
+<pre><code>git config --global --add color.ui true
+</code></pre>
+
+<ul>
+<li><code>git-diff</code> will color changes you have made.</li>
+<li><code>git-log</code> will color commit hashed yellow.</li>
+<li><code>git-branch</code> will color your current branch green and remote branches red.</li>
+<li><code>git-status</code> will color files in your index green. New and changed files are red.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
