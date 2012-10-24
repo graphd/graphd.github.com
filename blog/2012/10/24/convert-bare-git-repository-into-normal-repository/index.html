@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Graphd</title>
+  <title>Convert Bare Git Repository Into Normal Repository - Graphd</title>
   <meta name="author" content="Graphd">
 
   
-  <meta name="description" content="Blog Archive 2012 Convert Bare Git Repository Into Normal Repository
-Oct 24 2012 posted in git Linux cut Command
-Oct 11 2012 posted in cli, linux, &hellip;">
+  <meta name="description" content="Suppose you have a bare Git repository and want to access and browse files in it. You can get a working copy like this: For instance, your bare &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Oct 11 2012 posted in cli, linux, &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://graphd.org/blog/archives/">
+  <link rel="canonical" href="http://graphd.org/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,64 +63,103 @@ Oct 11 2012 posted in cli, linux, &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Convert Bare Git Repository Into Normal Repository</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T09:18:00+02:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Suppose you have a bare Git repository and want to access and browse files in it. You can get a working copy like this:</p>
 
-  
-  <h2>2012</h2>
+<p>For instance, your bare repository is <code>repo.git</code>.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/">Convert Bare Git Repository Into Normal Repository</a></h1>
-<time datetime="2012-10-24T09:18:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>24</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a></span>
-</footer>
+<ul>
+<li><code>mkdir repo</code></li>
+<li><code>cp repo.git repo/.git</code></li>
+<li><code>git config --bool core.bare false</code></li>
+<li><code>git checkout master</code></li>
+</ul>
 
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/11/linux-cut-command/">Linux cut Command</a></h1>
-<time datetime="2012-10-11T09:03:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>11</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/cli/'>cli</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/01/git-in-color/">Git in color</a></h1>
-<time datetime="2012-10-01T10:46:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>01</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/visualization/'>visualization</a></span>
-</footer>
-
-
-</article>
-
+<p>You can know browse files and use regular git commands.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Graphd</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-24T09:18:00+02:00" pubdate data-updated="true">Oct 24<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>git</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://graphd.org/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/" data-via="" data-counturl="http://graphd.org/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/11/linux-cut-command/" title="Previous Post: Linux cut Command">&laquo; Linux cut Command</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -170,7 +207,10 @@ Oct 11 2012 posted in cli, linux, &hellip;">
       var disqus_shortname = 'graphd';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://graphd.org/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/';
+        var disqus_url = 'http://graphd.org/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

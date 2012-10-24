@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: cli | Graphd]]></title>
+  <link href="http://graphd.org/blog/categories/cli/atom.xml" rel="self"/>
+  <link href="http://graphd.org/"/>
+  <updated>2012-10-24T09:28:26+02:00</updated>
+  <id>http://graphd.org/</id>
+  <author>
+    <name><![CDATA[Graphd]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux cut Command]]></title>
+    <link href="http://graphd.org/blog/2012/10/11/linux-cut-command/"/>
+    <updated>2012-10-11T09:03:00+02:00</updated>
+    <id>http://graphd.org/blog/2012/10/11/linux-cut-command</id>
+    <content type="html"><![CDATA[<p>The <code>cut</code> command can be used to take vertical slices of lines in a
+file. Say you have a file of currencies:</p>
+
+<pre><code>GYD 328 Guyanese dollar
+HKD 344 Hong Kong dollar
+HNL 340 Honduran lempira
+HRK 191 Croatian kuna
+</code></pre>
+
+<p>And you only need currency code and numeric code. The Linux <code>cut</code> command will be quite handy here:</p>
+
+<pre><code>cut -f 1,2 currencies
+</code></pre>
+
+<p>This will produce:</p>
+
+<pre><code>GYD 328
+HKD 344
+HNL 340
+HRK 191
+</code></pre>
+
+<p>The above command takes field 1 and 2 where "field" delimiter is
+TAB. You can change delimiter by specifying <code>-d &lt;delimiter&gt;</code>.</p>
+
+<p>The <code>--output-delimiter</code> can be used to seperate fields by comma.</p>
+
+<pre><code>cut -f 1,2 --output-delimiter=', ' currencies
+</code></pre>
+
+<p>This will procude:</p>
+
+<pre><code>GYD, 328
+HKD, 344
+HNL, 340
+HRK, 191
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

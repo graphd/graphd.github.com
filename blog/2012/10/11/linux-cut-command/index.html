@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Graphd</title>
+  <title>Linux cut Command - Graphd</title>
   <meta name="author" content="Graphd">
 
   
-  <meta name="description" content="Blog Archive 2012 Convert Bare Git Repository Into Normal Repository
-Oct 24 2012 posted in git Linux cut Command
-Oct 11 2012 posted in cli, linux, &hellip;">
+  <meta name="description" content="The cut command can be used to take vertical slices of lines in a
+file. Say you have a file of currencies: GYD 328 Guyanese dollar
+HKD 344 Hong Kong &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +20,7 @@ Oct 11 2012 posted in cli, linux, &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://graphd.org/blog/archives/">
+  <link rel="canonical" href="http://graphd.org/blog/2012/10/11/linux-cut-command/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -65,64 +65,129 @@ Oct 11 2012 posted in cli, linux, &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Linux Cut Command</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-11T09:03:00+02:00" pubdate data-updated="true">Oct 11<span>th</span>, 2012</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>The <code>cut</code> command can be used to take vertical slices of lines in a
+file. Say you have a file of currencies:</p>
 
-  
-  <h2>2012</h2>
+<pre><code>GYD 328 Guyanese dollar
+HKD 344 Hong Kong dollar
+HNL 340 Honduran lempira
+HRK 191 Croatian kuna
+</code></pre>
 
-<article>
-  
-<h1><a href="/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/">Convert Bare Git Repository Into Normal Repository</a></h1>
-<time datetime="2012-10-24T09:18:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>24</span> <span class='year'>2012</span></time>
+<p>And you only need currency code and numeric code. The Linux <code>cut</code> command will be quite handy here:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a></span>
-</footer>
+<pre><code>cut -f 1,2 currencies
+</code></pre>
 
+<p>This will produce:</p>
 
-</article>
+<pre><code>GYD 328
+HKD 344
+HNL 340
+HRK 191
+</code></pre>
 
+<p>The above command takes field 1 and 2 where &#8220;field&#8221; delimiter is
+TAB. You can change delimiter by specifying <code>-d &lt;delimiter&gt;</code>.</p>
 
+<p>The <code>--output-delimiter</code> can be used to seperate fields by comma.</p>
 
-<article>
-  
-<h1><a href="/blog/2012/10/11/linux-cut-command/">Linux cut Command</a></h1>
-<time datetime="2012-10-11T09:03:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>11</span> <span class='year'>2012</span></time>
+<pre><code>cut -f 1,2 --output-delimiter=', ' currencies
+</code></pre>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/cli/'>cli</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a></span>
-</footer>
+<p>This will procude:</p>
 
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2012/10/01/git-in-color/">Git in color</a></h1>
-<time datetime="2012-10-01T10:46:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>01</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/visualization/'>visualization</a></span>
-</footer>
-
-
-</article>
-
+<pre><code>GYD, 328
+HKD, 344
+HNL, 340
+HRK, 191
+</code></pre>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Graphd</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-11T09:03:00+02:00" pubdate data-updated="true">Oct 11<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cli/'>cli</a>, <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://graphd.org/blog/2012/10/11/linux-cut-command/" data-via="" data-counturl="http://graphd.org/blog/2012/10/11/linux-cut-command/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/10/01/git-in-color/" title="Previous Post: Git in color">&laquo; Git in color</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/10/24/convert-bare-git-repository-into-normal-repository/" title="Next Post: Convert Bare Git Repository Into Normal Repository">Convert Bare Git Repository Into Normal Repository &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -170,7 +235,10 @@ Oct 11 2012 posted in cli, linux, &hellip;">
       var disqus_shortname = 'graphd';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://graphd.org/blog/2012/10/11/linux-cut-command/';
+        var disqus_url = 'http://graphd.org/blog/2012/10/11/linux-cut-command/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: visualization | Graphd]]></title>
-  <link href="http://graphd.github.com/blog/categories/visualization/atom.xml" rel="self"/>
-  <link href="http://graphd.github.com/"/>
-  <updated>2012-10-01T12:47:55+02:00</updated>
-  <id>http://graphd.github.com/</id>
+  <link href="http://graphd.org/blog/categories/visualization/atom.xml" rel="self"/>
+  <link href="http://graphd.org/"/>
+  <updated>2012-10-24T09:28:26+02:00</updated>
+  <id>http://graphd.org/</id>
   <author>
     <name><![CDATA[Graphd]]></name>
     
@@ -15,21 +15,15 @@
   
   <entry>
     <title type="html"><![CDATA[Git in color]]></title>
-    <link href="http://graphd.github.com/blog/2012/10/01/git-in-color/"/>
+    <link href="http://graphd.org/blog/2012/10/01/git-in-color/"/>
     <updated>2012-10-01T10:46:00+02:00</updated>
-    <id>http://graphd.github.com/blog/2012/10/01/git-in-color</id>
+    <id>http://graphd.org/blog/2012/10/01/git-in-color</id>
     <content type="html"><![CDATA[<p>This will add colors on git-diff, git-log, git-*:</p>
 
 <pre><code>git config --global --add color.ui true
 </code></pre>
 
-<ul>
-<li><code>git-diff</code> will color changes you have made.</li>
-<li><code>git-log</code> will color commit hashed yellow.</li>
-<li><code>git-branch</code> will color your current branch green and remote branches red.</li>
-<li><code>git-status</code> will color files in your index green. New and changed files are red.</li>
-</ul>
-
+<p>See <code>man git-config</code> for more information.</p>
 ]]></content>
   </entry>
   
